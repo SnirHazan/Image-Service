@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "Confirm";
+}
+
+<h2 style="font-weight:bold">Confirm:</h2><br />
+
+<h5 style="font-size:large;color:orangered">Are You Sure You Want To Remove This Handler?</h5>
+<h5>@ViewBag.name</h5>
+
+<button id="YesBtn" class="btn-success btn-sm" onclick="location.href ='@Url.Action("RemoveHandler","Configuration")';this.disabled = 'disabled'">
+    Yes
+</button>
+<button id="NoBtn" class="btn-danger btn-sm" onclick="location.href ='@Url.Action("ConfigurationView","Configuration")';this.disabled = 'disabled'">
+    No
+</button>
+
+
+

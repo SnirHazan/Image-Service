@@ -1,0 +1,71 @@
+﻿@model WebApplication2.Models.Configuration
+@{
+    ViewBag.Title = "Configuration";
+}
+<head>
+    <style>
+        tr:nth-child(2n) {
+            background-color: #f2f2f2;
+        }
+
+        .setting_right {
+            color: black;
+            font-size: 18px;
+            text-align: left;
+        }
+
+        .setting_left {
+            color: black;
+            font-size: 18px;
+            font-weight: bold;
+            text-align:left
+        }
+
+        th {
+            color: maroon;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<h2 style="font-weight:bold">Configuration:</h2><br />
+
+<table class="table">
+    <caption style="text-align:left;font-size:20px">Settings:</caption>
+    <tr>
+        <td class="setting_left">Output Directory:</td>
+        <td class="setting_right">@Model.OutputDir</td>
+    </tr>
+    <tr>
+        <td class="setting_left">Source Name:</td>
+        <td class="setting_right">@Model.SourceName</td>
+    </tr>
+    <tr>
+        <td class="setting_left">Log Name:</td>
+        <td class="setting_right">@Model.LogName</td>
+    </tr>
+    <tr>
+        <td class="setting_left">Thumbnail Size:</td>
+        <td class="setting_right">@Model.ThumbS</td>
+    </tr>
+</table>
+<br />
+
+<table class="table" style="width:50%" >
+
+    <caption style="text-align:left;font-size:20px">Handlers:</caption>
+    @foreach (var item in Model.HandlerList)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item)
+            </td>
+            <td >
+                <button style="align-self:center" id="Delete" onclick="location.href ='@Url.Action("ConfirmView","Configuration",new { handler = item },null)';this.disabled = 'disabled'">
+                    Delete
+                </button>
+            </td>
+        </tr>
+    }
+</table>

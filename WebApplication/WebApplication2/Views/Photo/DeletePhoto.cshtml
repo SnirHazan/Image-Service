@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "DeletePhoto";
+}
+
+<h2 style="font-weight:bold">Delete Photo:</h2>
+
+<h5 style="font-size:large;color:orangered">Are You Sure You Want To Remove This Photo?</h5>
+<button id="YesBtn" class="btn-success btn" onclick="location.href ='@Url.Action("RemovePhoto","Photo")';this.disabled = 'disabled'">
+    Yes
+</button>
+<button id="NoBtn" class="btn-danger btn" onclick="location.href ='@Url.Action("PhotoView","Photo")';this.disabled = 'disabled'">
+    No
+</button>
+<h3>Image name: @ViewBag.name</h3>
+
+<img src="@Url.Content(ViewBag.path)" />
+<br />
+<br />
+

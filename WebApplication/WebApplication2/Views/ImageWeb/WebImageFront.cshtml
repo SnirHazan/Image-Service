@@ -1,0 +1,84 @@
+﻿@model WebApplication2.Models.ImageWeb
+
+@{
+    ViewBag.Title = "ImageService - Web App";
+}
+<head>
+    <style>
+        th {
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .color_Connected
+        {
+            color:green;
+            font-weight:bold;
+        }
+        .color_Disconnected {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+
+<h2 style="font-weight:bold">ImageService</h2><br />
+<table class="table" style="width:50%">
+    <tr>
+        <th>
+            Service Status:
+        </th>
+        <td>
+            <text class="color_@ViewBag.Status" id="Status">
+                @ViewBag.Status
+            </text>
+        </td>
+    </tr>
+    <tr>
+        <th>
+            Number Of Pictures:
+        </th>
+        <td>
+            @ViewBag.Count
+        </td>
+    </tr>
+</table>
+
+<br />
+<br />
+<br />
+
+<table class="table">
+    <caption style="text-align:left;font-size:20px">Creators:</caption>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Students[0].FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Students[0].LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Students[0].ID)
+        </th>
+
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model.Students)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ID)
+            </td>
+        </tr>
+    }
+
+</table>
+
+

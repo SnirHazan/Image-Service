@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewBag.Title = "ViewerPhoto";
+}
+
+<h2 style="font-weight:bold">Photo:</h2>
+
+    <table class="table" style="width:25%">
+        <tr>
+            <th>
+                Image name:
+            </th>
+            <td>
+                    @ViewBag.name
+            </td>
+        </tr>
+        <tr>
+            <th>
+                Date:
+            </th>
+            <td>
+                @ViewBag.month/@ViewBag.year
+            </td>
+        </tr>
+    </table>
+
+
+<div class="container">
+    <img src="@Url.Content(ViewBag.path)" />
+</div>
+<br />
+
+
+<button id="YesBtn" class="btn-danger btn" onclick="location.href ='@Url.Action("RemovePhoto","Photo")';this.disabled = 'disabled'">
+    Delete
+</button>
+

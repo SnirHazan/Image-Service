@@ -1,0 +1,28 @@
+﻿@using WebApplication2.Models;
+
+@model IEnumerable<WebApplication2.Models.PhotoAlbum.Photo>
+
+<h2 style="font-weight:bold">Photos Album:</h2><br />
+
+<div class="container">
+
+    @foreach (var item in Model)
+    {
+
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+                <img src="@Url.Content(item.RelativeThumbnailPath)" alt=@item.ImageName class="img-circle" width="242" height="200">
+                <div class="caption">
+                    <h4>@item.ImageName</h4>
+                    <p>year: @item.Year Month:@item.Month</p>
+                    <p>
+                        <a href="@Url.Action("DeletePhoto", new {name = item.ImageName, thumbPath = item.ThumbnailPath, photoPath = item.ImagePath, photoRelThumb = item.RelativeThumbnailPath})" id="btnDel" class="btn btn-danger btn-lg" role="button">DELETE</a>
+                        <a href="@Url.Action("ViewerPhoto", new { photoRelPath = item.RelativeImagePath, name = item.ImageName, year = item.Year, month = item.Month, thumbPath = item.ThumbnailPath, photoPath = item.ImagePath})" 
+                           id="btnView" class="btn btn-info btn-lg" role="button">VIEW</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    }
+</div>

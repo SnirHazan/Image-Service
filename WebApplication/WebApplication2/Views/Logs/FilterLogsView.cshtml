@@ -1,0 +1,55 @@
+﻿@using WebApplication2.Models;
+
+@model IEnumerable<WebApplication2.Communication.MessageRecievedEventArgs>
+@{
+    ViewBag.Title = "LogsView";
+}
+
+<head>
+    <style>
+        tr:nth-child(2n) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<h2 style="font-weight:bold">Logs:</h2><br />
+
+Filter Logs By:<br>
+@using (Html.BeginForm("FilterLogsView", "Logs", FormMethod.Post))
+{
+    <div>
+        <br />
+        @Html.DropDownList("typeFilter", new List<SelectListItem>{
+        new SelectListItem {Text="INFO",Value="INFO"},
+        new SelectListItem{Text="WARNING",Value="WARNING"},
+        new SelectListItem {Text="FAIL",Value="FAIL"} }, "All Logs", new { @class = "form-control" })
+        <input type="submit" id="submitId" value="Filter" class="btn btn-primary" />
+
+    </div>
+}
+
+<table class="table">
+
+    <tr>
+        <th>
+            Type:
+        </th>
+        <th>
+            Message:
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Message)
+            </td>
+        </tr>
+    }
+
+</table>
+
