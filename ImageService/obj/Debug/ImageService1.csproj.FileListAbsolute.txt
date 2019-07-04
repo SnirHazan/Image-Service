@@ -1,0 +1,7 @@
+C:\Users\אורן\Desktop\advenced2\ImageService\ImageService\obj\Debug\ImageService1.csprojResolveAssemblyReference.cache
+C:\Users\אורן\Desktop\advenced2\ImageService\ImageService\obj\Debug\ImageService.ImageService.resources
+C:\Users\אורן\Desktop\advenced2\ImageService\ImageService\obj\Debug\ImageService.ProjectInstaller.resources
+C:\Users\אורן\Desktop\advenced2\ImageService\ImageService\obj\Debug\ImageService1.csproj.GenerateResource.cache
+C:\Users\אורן\Desktop\advenced2\ImageService\ImageService\obj\Debug\ImageService1.csproj.CoreCompileInputs.cache
+C:\Users\אורן\Desktop\advenced2\ImageService\ImageService\obj\Debug\ImageService.exe
+C:\Users\אורן\Desktop\advenced2\ImageService\ImageService\obj\Debug\ImageService.pdb

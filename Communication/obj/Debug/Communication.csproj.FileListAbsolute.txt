@@ -1,0 +1,11 @@
+C:\Users\snirh\Desktop\27.5.18\Communication\obj\Debug\Communication.csprojResolveAssemblyReference.cache
+C:\Users\snirh\Desktop\27.5.18\Communication\obj\Debug\Communication.csproj.CoreCompileInputs.cache
+C:\Users\snirh\Desktop\27.5.18\Communication\bin\Debug\Communication.dll
+C:\Users\snirh\Desktop\27.5.18\Communication\bin\Debug\Communication.pdb
+C:\Users\snirh\Desktop\27.5.18\Communication\bin\Debug\Infrastructure.dll
+C:\Users\snirh\Desktop\27.5.18\Communication\bin\Debug\Newtonsoft.Json.dll
+C:\Users\snirh\Desktop\27.5.18\Communication\bin\Debug\Infrastructure.pdb
+C:\Users\snirh\Desktop\27.5.18\Communication\bin\Debug\Newtonsoft.Json.xml
+C:\Users\snirh\Desktop\27.5.18\Communication\obj\Debug\Communication.csproj.CopyComplete
+C:\Users\snirh\Desktop\27.5.18\Communication\obj\Debug\Communication.dll
+C:\Users\snirh\Desktop\27.5.18\Communication\obj\Debug\Communication.pdb
